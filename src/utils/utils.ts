@@ -81,7 +81,7 @@ function messagesFromFile(file: ExtractedFile, isAnonymous = false) {
       ...msg,
       author:
         author && isAnonymous
-          ? `User ${uniqueIdGenerator.getId(author)}`
+          ? `Usuário ${uniqueIdGenerator.getId(author)}`
           : author,
       index,
     }));

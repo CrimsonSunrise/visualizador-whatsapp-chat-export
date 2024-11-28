@@ -1,41 +1,41 @@
 import type { Message } from 'whatsapp-chat-parser';
 import JSZip from 'jszip';
 
-type FilterMode = 'index' | 'date';
+type FilterMode = 'índice' | 'data';
 
 type ExtractedFile = string | JSZip | null;
 
 interface IndexedMessage extends Message {
-  index: number;
+    index: number;
 }
 
 interface ILimits {
-  low: number;
-  high: number;
+    low: number;
+    high: number;
 }
 
 interface DateBounds {
-  start: Date;
-  end: Date;
+    start: Date;
+    end: Date;
 }
 
 interface PollOption {
-  text: string;
-  votes: number;
+    text: string;
+    votes: number;
 }
 
 interface PollStructure {
-  title: string;
-  options: PollOption[];
-  maxVotes: number;
+    title: string;
+    options: PollOption[];
+    maxVotes: number;
 }
 
 export type {
-  FilterMode,
-  ExtractedFile,
-  IndexedMessage,
-  ILimits,
-  DateBounds,
-  PollOption,
-  PollStructure,
+    FilterMode,
+    ExtractedFile,
+    IndexedMessage,
+    ILimits,
+    DateBounds,
+    PollOption,
+    PollStructure,
 };

@@ -1,10 +1,10 @@
 import { atom } from 'jotai';
 
 import {
-  extractFile,
-  extractStartEndDatesFromMessages,
-  messagesFromFile,
-  participantsFromMessages,
+    extractFile,
+    extractStartEndDatesFromMessages,
+    messagesFromFile,
+    participantsFromMessages,
 } from '../utils/utils';
 
 const isMenuOpenAtom = atom(false);
@@ -13,23 +13,23 @@ const isAnonymousAtom = atom(false);
 const rawFileAtom = atom<FileReader['result']>(null);
 const extractedFileAtom = atom(get => extractFile(get(rawFileAtom)));
 const messagesAtom = atom(get =>
-  messagesFromFile(get(extractedFileAtom), get(isAnonymousAtom)),
+    messagesFromFile(get(extractedFileAtom), get(isAnonymousAtom)),
 );
 const participantsAtom = atom(get =>
-  participantsFromMessages(get(messagesAtom)),
+    participantsFromMessages(get(messagesAtom)),
 );
 
 const messagesDateBoundsAtom = atom(get =>
-  extractStartEndDatesFromMessages(get(messagesAtom)),
+    extractStartEndDatesFromMessages(get(messagesAtom)),
 );
 
 export {
-  isMenuOpenAtom,
-  activeUserAtom,
-  isAnonymousAtom,
-  rawFileAtom,
-  messagesAtom,
-  participantsAtom,
-  extractedFileAtom,
-  messagesDateBoundsAtom,
+    isMenuOpenAtom,
+    activeUserAtom,
+    isAnonymousAtom,
+    rawFileAtom,
+    messagesAtom,
+    participantsAtom,
+    extractedFileAtom,
+    messagesDateBoundsAtom,
 };

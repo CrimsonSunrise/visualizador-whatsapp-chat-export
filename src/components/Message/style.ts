@@ -2,33 +2,34 @@ import styled, { css } from 'styled-components';
 
 import { overflowBreakWord, messageBaseStyle } from '../../utils/styles';
 import {
-  systemBackgroundColor,
-  systemDarkBackgroundColor,
-  activeUserBackgroundColor,
-  activeUserDarkBackgroundColor,
+    systemBackgroundColor,
+    systemDarkBackgroundColor,
+    activeUserBackgroundColor,
+    activeUserDarkBackgroundColor,
 } from '../../utils/colors';
 
 const Item = styled.li<{
-  $isSystem: boolean;
-  $isActiveUser: boolean;
-  $sameAuthorAsPrevious: boolean;
+    $messageType: string,
+    $isSystem: boolean;
+    $isActiveUser: boolean;
+    $sameAuthorAsPrevious: boolean;
 }>`
   margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   ${props =>
-    props.$isSystem &&
-    css`
+        props.$isSystem &&
+        css`
       text-align: center;
     `}
   ${props =>
-    props.$isActiveUser &&
-    css`
+        props.$isActiveUser &&
+        css`
       text-align: right;
     `}
   ${props =>
-    props.$sameAuthorAsPrevious &&
-    css`
+        props.$sameAuthorAsPrevious &&
+        css`
       margin-top: 0.25rem;
     `}
 
@@ -50,13 +51,13 @@ const Index = styled.div<{ $isSystem: boolean; $isActiveUser: boolean }>`
   opacity: 0;
   transition: opacity 0.3s ease;
   ${props =>
-    props.$isSystem &&
-    css`
+        props.$isSystem &&
+        css`
       background-color: ${systemBackgroundColor};
     `}
   ${props =>
-    props.$isActiveUser &&
-    css`
+        props.$isActiveUser &&
+        css`
       background-color: ${activeUserBackgroundColor};
     `}
 
@@ -69,33 +70,40 @@ const Index = styled.div<{ $isSystem: boolean; $isActiveUser: boolean }>`
     border-color: rgba(255, 255, 255, 0.1);
     color: #f1f1f2;
     ${props =>
-      props.$isSystem &&
-      css`
+        props.$isSystem &&
+        css`
         background-color: ${systemDarkBackgroundColor};
       `}
     ${props =>
-      props.$isActiveUser &&
-      css`
+        props.$isActiveUser &&
+        css`
         background-color: ${activeUserDarkBackgroundColor};
       `}
   }
 `;
 
-const Bubble = styled.div<{ $isSystem: boolean; $isActiveUser: boolean }>`
+const Bubble = styled.div<{ $messageType: string, $isSystem: boolean; $isActiveUser: boolean }>`
   ${messageBaseStyle}
 
   position: relative;
   background-color: white;
   ${props =>
-    props.$isSystem &&
-    css`
+        props.$isSystem &&
+        css`
       background-color: ${systemBackgroundColor};
     `}
   ${props =>
-    props.$isActiveUser &&
-    css`
+        props.$isActiveUser &&
+        css`
       text-align: left;
       background-color: ${activeUserBackgroundColor};
+    `}
+    ${props =>
+        props.$messageType === "attachment" &&
+        css`
+      display: inline-flex;
+      flex-direction: column;
+      gap: 4px;
     `}
 
   @media (max-width: 699px) {
@@ -110,14 +118,14 @@ const Bubble = styled.div<{ $isSystem: boolean; $isActiveUser: boolean }>`
     background-color: #262d31;
     color: #f1f1f2;
     ${props =>
-      props.$isSystem &&
-      css`
+        props.$isSystem &&
+        css`
         background-color: ${systemDarkBackgroundColor};
         color: #fad964;
       `}
     ${props =>
-      props.$isActiveUser &&
-      css`
+        props.$isActiveUser &&
+        css`
         background-color: ${activeUserDarkBackgroundColor};
       `}
   }

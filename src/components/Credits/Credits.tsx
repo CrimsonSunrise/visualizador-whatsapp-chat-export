@@ -1,16 +1,16 @@
 function Credits() {
-  return (
-    <div>
-      <small>
-        Made by <a href="https://lorisbettazza.com">Loris Bettazza</a>
-        <br />
-        View{' '}
-        <a href="https://github.com/Pustur/whatsapp-chat-parser-website">
-          Source code
-        </a>
-      </small>
-    </div>
-  );
+	return (
+		<div>
+			<small>
+				Feito por <a href="https://lorisbettazza.com">Loris Bettazza</a>
+				<br />
+				Ver{' '}
+				<a href="https://github.com/Pustur/whatsapp-chat-parser-website">
+					Código fonte
+				</a>
+			</small>
+		</div>
+	);
 }
 
 export default Credits;
