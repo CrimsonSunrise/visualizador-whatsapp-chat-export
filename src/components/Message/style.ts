@@ -99,12 +99,12 @@ const Bubble = styled.div<{ $messageType: string, $isSystem: boolean; $isActiveU
       background-color: ${activeUserBackgroundColor};
     `}
     ${props =>
-        props.$messageType === "attachment" &&
+        props.$messageType === "attachment" || props.$messageType === "poll" ?
         css`
       display: inline-flex;
       flex-direction: column;
       gap: 4px;
-    `}
+    ` : null}
 
   @media (max-width: 699px) {
     flex-direction: column;

@@ -6,6 +6,10 @@ Este site permite que você faça upload de um log de chat do WhatsApp e visuali
 Você pode fazer upload de um `txt` diretamente ou de um arquivo `zip` contendo o chat exportado.  
 Caso você exporte um arquivo `zip` com a opção `Anexar Mídia`, você poderá ver imagens, vídeos e arquivos de áudio diretamente no site. Experimente baixando o [chat de exemplo](https://github.com/Pustur/whatsapp-chat-parser-website/blob/master/src/assets/whatsapp-chat-parser-example.zip)!
 
+<img src="https://github.com/CrimsonSunrise/visualizador-whatsapp-chat-export/blob/master/src/assets/screenshot1.png" style="max-width: 894px; width: 100%; aspect-ratio: 1/1;">
+
+<img src="https://github.com/CrimsonSunrise/visualizador-whatsapp-chat-export/blob/master/src/assets/screenshot2.png" style="max-width: 894px; width: 100%; aspect-ratio: 1/1;">
+
 O aplicativo roda localmente e nenhum log é enviado ou armazenado em nenhum lugar.
 
 O site está disponível em [whatsapp-chat-parser-website-eight.vercel.app](https://whatsapp-chat-parser-website-eight.vercel.app)
@@ -19,7 +23,6 @@ O site está disponível em [whatsapp-chat-parser-website-eight.vercel.app](http
 5. Execute `npm run build` para construir o pacote compilado que você encontrará na pasta `build/`
 
 Qualquer servidor local servirá para rodar os arquivos construídos.  
-Também é possível baixá-los diretamente da [página de lançamentos](https://github.com/Pustur/whatsapp-chat-parser-website/releases).
 
 ## Como exportar chats do WhatsApp
 
