@@ -8,7 +8,7 @@ Caso você exporte um arquivo `zip` com a opção `Anexar Mídia`, você poderá
 
 O aplicativo roda localmente e nenhum log é enviado ou armazenado em nenhum lugar.
 
-O site está disponível em [whatsapp-chat-parser.netlify.app](https://whatsapp-chat-parser.netlify.app/)
+O site está disponível em [whatsapp-chat-parser-website-eight.vercel.app](https://whatsapp-chat-parser-website-eight.vercel.app)
 
 ## Como rodar localmente
 
