@@ -1,4 +1,4 @@
-# Website do Parser de Chat do WhatsApp
+# Visualizador Chat Exportado do WhatsApp
 
 > Aplicação de exemplo do pacote npm [whatsapp-chat-parser](https://github.com/Pustur/whatsapp-chat-parser)
 
